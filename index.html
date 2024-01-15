@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> H&H WEBSITE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="slider()">
+    <nav>
+                
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="about us.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">contact</a></li>
+        </ul>
+    </nav>
+</nav>
+    
+<div class="banner">
+    <div class="slider">
+    <img src="images/Root-Canal-Treatment-2.jpeg" id = "slideImg">    
+    </div>
+    </div>
+
+    <!------section one-->
+ <section >
+
+    <div class="single-services">
+     <img src="images/Root-Canal-Treatment-2.jpeg" alt= image height="500" width="1400">
+     <div class="overlay"></div>
+     <div class="service-desc">
+     <h3>H & H hospital </h3>
+     <hr>
+     <p>
+         To create a betther lives for peopole living in underserved areas,by providing <br>
+             affordable class healthcare  with compassion, through services excellence.
+     </p>
+          
+     </div>
+    </div> 
+    </section>
+<!----footer section-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                
+            </div>
+            <div class="footer-col-2">
+                <img src="images/pham.jpeg">
+                <p class="footer-1"> We ensure after Receiving our services we put a smile to your face that is our
+                    happiness and the reason we are Health Happiness hospital, we are here to serve You.
+                </p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful links</h3>
+                <ul>
+                    <li><a href="about us.html">About us </a></li>
+                    <li> <a href="services.html">Our services </a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebbok</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>You Tube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="CopyRight ">CopyRight H & H website@2024</p>
+    </div>
+</div>
+
+
+
+
+        <!---js for sliding----->
+        <script>
+         var slideImg = document.getElementById("slideImg");
+         var images = new Array(
+      id = slider,
+            "images/Root-Canal-Treatment-2.jpeg",
+            "images/hospitalblock.jpg",
+            "images/h&h photo.jpg", 
+        
+            );
+         var len =images.length;
+         var i =0;
+         function slider(){
+            if(i>len-1){
+                i=0;
+            }
+            slideImg.src = images[i];
+            i++;
+            setTimeout('slider()',5000);
+         }
+
+            
+            
+                  
+        </script>
+   </body>
+</html>

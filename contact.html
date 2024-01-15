@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> H&H WEBSITE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="slider()">
+    <nav>
+                
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="about us.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </nav>
+</nav>
+    
+<!------- form section-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+              <h1 class ="sub-title">contact us</h1>
+            </div>
+        
+</div>
+<div class="row">
+    <div class="col-2">
+        <h2>Reach us on </h2>
+        <hr><br>
+        <h5><i>📞 0114949493</i></h5>
+        <h1>Twitter</h1>
+        <h1>facebook</h1>
+        <h1>email</h1>
+        <p>hh.africahealth@gmail.com</p><br><br>
+
+        <ol>
+            <h1>Our Brances;</h1>
+            <li> Nairobi</li><br>
+            <li> Nakuru</li><br>
+            <li> Mombasa</li><br>
+            <li> Kisumu</li><br>
+            <li> Eldoret</li>
+            </ol>
+        
+    
+    </div>
+    <div class="contact-right">
+    <div class="col-2">
+        <form name="submit-to-google-sheet">
+            <h3>Book an appointment with us</h3>
+            <input type="Name" name="Name" placeholder="Your name" required>
+            <input type="Email" name="Email" placeholder="Your Email" required>
+            <textarea name="Message" rows="9" placeholder="Your message include date, time and day"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <span id="msg"></span>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+
+<!----footer section-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                
+            </div>
+            <div class="footer-col-2">
+                <img src="images/pham.jpeg">
+                <p class="footer-1"> We ensure after Receiving our services we put a smile to your face that is our
+                    happiness and the reason we are Health Happiness hospital, we are here to serve You.
+                </p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful links</h3>
+                <ul>
+                    <li><a href="about us.html">About us </a></li>
+                    <li> <a href="services.html">Our services </a></li>
+                    <li> <a href="contact.html">contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebbok</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>You Tube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="CopyRight ">CopyRight H & H website@2024</p>
+    </div>
+</div>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxH36_F86HWzE1Jik2slRzP0zMQ2uaKBHNse81vOeJrcFOk_-9YFbbm-6NGs7aw1jNyHg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+             msg.innerHTML="message sent successfuly"
+             setTimeout (function(){
+                msg.innerHTML=""
+             },5000)
+             form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
+   </body>
+</html>
